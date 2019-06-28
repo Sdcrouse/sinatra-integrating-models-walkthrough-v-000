@@ -7,8 +7,9 @@ class TextAnalyzer
   end 
   
   def count_of_words
-    words = text.split(" ") # I thought I also needed #strip, but I don't.
-    words.count 
+    # words = text.split(" ") # I thought I also needed #strip, but I don't.
+    # words.count 
+    text.split(" ").count # Simplified
   end
   
   def count_of_vowels
@@ -52,6 +53,6 @@ class TextAnalyzer
     most_common = letter_hash.sort_by{ |key, value| value }.last 
     # That ^^^ sorts the hash by its values, then returns an array containing the letter that appears the most and its corresponding number of appearances. Ex: ["f", 13]
     
-    biggest = { most_common.first => most_common.last } # I'll have to compare the speeds of each method later.
+    { most_common.first => most_common.last } # I'll have to compare the speeds of each method later. Originally, I set this to a variable, but that's not really needed.
   end
 end
