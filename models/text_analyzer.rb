@@ -52,7 +52,7 @@ class TextAnalyzer
     # I think I found a quicker way than above ^^^, with less code:
     most_common = letter_hash.sort_by{ |key, value| value }.last 
     # That ^^^ sorts the hash by its values, then returns an array containing the letter that appears the most and its corresponding number of appearances. Ex: ["f", 13]
-    
+    binding.pry
     { most_common.first => most_common.last } # I'll have to compare the speeds of each method later. Originally, I set this to a variable, but that's not really needed.
   end
 end
