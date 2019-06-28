@@ -56,5 +56,6 @@ class TextAnalyzer
     
     # Unfortunately, this doesn't work. It fails the tests because of that call to #last. 
     # When there's a tie (multiple letters appearing an equal number of times), the FIRST letter that appears in the string should be returned. #last doesn't do that.
+    # I'll play around with this later.
   end
 end
